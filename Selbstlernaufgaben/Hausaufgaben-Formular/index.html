@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <label for="name">Name</label>
+        <input id="name" name="name" required="true">
+        <label for="matrikelnummer">Matrikelnummer</label>
+        <input id="matrikelnummer" type="number" step="1" min="100000" max="999999">
+        <label for="datei">Datei</label>
+        <input id="datei" type="file" accept="application/pdf">
+        <button type="submit" form="form" value="abschicken">Abschicken</button>
+        <button type="reset" form="form" value="reset">Reset</button>
+    </form>
+</body>
+</html>

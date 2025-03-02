@@ -1,0 +1,171 @@
+/* navbar */
+
+nav ul li{
+    display:inline-block;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: blue;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 2px;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    word-spacing: 2px;
+    width: 100vw;
+}
+
+nav li {
+    float: left;
+    width: calc(100%/9);
+    display: inline;
+    word-spacing: 2px;
+}
+
+nav {
+    background-color: lightgray;
+    height: 75px;
+    line-height: 50px;
+}
+
+/* default */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+    border: 1px solid black;
+    width: 90%;
+    background-color: whitesmoke;
+    padding: 0 1em;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form label {
+    margin-top: 10px; /* Fügt etwas Abstand zu den Labels hinzu */
+}
+
+form input {
+    margin-top: 0px;
+    margin-bottom: 10px; /* Abstand unter den Inputs */
+    width: 200px;
+}
+
+form button {
+    width: 100px;
+}
+
+form select {
+    width: 200px;
+}
+
+table {
+    margin-top: 50px;
+    color: #333;
+    background: white;
+    border: 1px solid grey;
+    font-size: 12pt;
+    border-collapse: collapse;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 30px;
+}
+
+.checkboxes label {
+    display: inline-block;
+    white-space: nowrap;
+}
+.checkboxes input {
+    vertical-align: middle;
+}
+.checkboxes label span {
+    vertical-align: middle;
+}
+
+.checkboxes label {
+    display:block;
+}
+
+.checkboxes {
+    margin-left: -100px
+}
+
+.checkboxes span {
+    margin-left: -75px;
+}
+
+#activeinactive label {
+    display: block;
+    margin-left: -95px;
+}
+#activeinactive span {
+    margin-left: -85px;
+}
+
+form[name="delete"] {
+    border: 0px solid black;
+    width: 90%;
+    background-color: white;
+    padding: 0 1em;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#calendar {
+    max-width: 800px;
+    margin: 0 auto;
+    height: 500px;
+}
+
+#iframe {
+    max-width: 800px;
+    margin: 0 auto;
+    height: 500px;
+}
+
+#iframe iframe {
+    width: 100%;
+    height: 100%;
+    border: 2px double black;
+    border-collapse: separate;
+   
+}
+
+#date-info {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.draggable {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    cursor: move;
+    display: inline-block;
+}
+#drop {
+    border: 2px dashed #ccc;
+    min-height: 200px;
+    padding: 10px;
+    margin: 10px;
+}

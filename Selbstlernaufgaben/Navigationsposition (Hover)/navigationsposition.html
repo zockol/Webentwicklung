@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+
+    <style>        
+        /* TODO */   
+        ol{
+            background: white;
+            padding: 5px;
+        }
+        li {
+            background: lightblue;
+            margin: 5px;
+        }
+        nav li.topic {
+            display: inline-block;
+            position: relative;
+        }
+
+        nav .chapter1_sub,
+        nav .chapter2_sub {
+            display: none;
+            position: absolute;
+            background: white;
+            top: 100%;
+            z-index: 1; /* Wichtig, damit das Menü über anderen Inhalten angezeigt wird */
+        }
+
+        nav li.topic:hover .chapter1_sub,
+        nav li.topic:hover .chapter2_sub,
+        nav li.topic .chapter1_sub:hover,
+        nav li.topic .chapter2_sub:hover {
+            display: block;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        Navigation
+    </header>
+    <nav>
+        <ul>
+            <li class="topic">
+                <a href="#chapter1">Kapitel 1</a>
+                <ul class="chapter1_sub">
+                    <li><a href="#chapter1-1">Abschnitt 1.1</a></li>
+                    <li><a href="#chapter1-2">Abschnitt 1.2</a></li>
+                </ul>
+            </li>
+            <li class="topic">
+                <a href="#chapter2">Kapitel 2</a>
+                <ul class="chapter2_sub">
+                    <li><a href="#chapter2-1">Abschnitt 2.1</a></li>
+                    <li><a href="#chapter2-2">Abschnitt 2.2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <p>Think of cheeseburgers like a Tinder match. They might not all be your soulmate but you’ve gotta find out to be sure. It can get a little messy and that’s just part of the fun.</p>
+        <p>Some are cheesy, others can be a little dry, and the rare few are a disaster. There are so many cheeseburgers out there it can be hard to commit to just one favourite. That being said, when you know, you just know.</p>
+        <p>Everyone has their perfect match. Sometimes it’s just around the corner, other times you have to travel the world in search of it. Wherever your perfect cheeseburger is, it’s out there.</p>        
+    </main>
+    <footer>Selbstlernübung, Webentwicklung 1</footer>
+</body>
+</html>

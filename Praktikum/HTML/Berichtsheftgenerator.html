@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <title>Berichtsheftgenerator</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="alternate stylesheet" href="alternativ.css" title="Alternativ">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./abwesenheitsantraege.html">Abwesenheitsanträge</a></li>
+                <li><a href="./Berichtsheft.html">Berichtsheft</a></li>
+                <li><a href="./Berichtsheftgenerator.html">Berichtsheftgenerator</a></li>
+                <li><a href="./Berufsschule.html">Berufsschule</a></li>
+                <li><a href="./Taetigkeiten.html">Tätigkeiten</a></li>
+              </ul>
+        </nav>
+    </header>
+    <form id="benutzerdaten">
+        <label for="name">Vor- und Nachname</label>
+        <input type="text" required="true" id="name">
+        <label for="ausbildungsbezeichnung">Ausbildungsberufsbezeichnung</label>
+        <input type="text" required="true" id="ausbildungsbezeichnung">
+        <label for="ausbildungsabteilung">Ausbildungsabteilung</label>
+        <input type="text" required="true" id="ausbildungsabteilung">
+        <label for="startdatum">Startdatum</label>
+        <input type="date" required="true" id="startdatum">
+        <label for="enddatum">Enddatum</label>
+        <input type="date" required="true" id="enddatum">
+        <label for="firma">Firma</label>
+        <input type="text" required="true" id="firma">
+        <label for="ausbilder">Ausbilder</label>
+        <input type="text" required="true" id="ausbilder">
+        <button type="submit" form="benutzerdaten">Absenden</button>
+        <button type="reset" form="benutzerdaten">Löschen</button>
+    </form>
+</body>
+</html>

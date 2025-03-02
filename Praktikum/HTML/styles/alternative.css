@@ -1,0 +1,144 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: rgb(241, 241, 241);
+}
+
+.content {
+    padding-left: 60px;
+}
+
+a {
+    color: rgb(6, 9, 196);
+    text-decoration: none;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background: #fff;
+    width: 50px;
+    overflow: hidden;
+    transition: width 0.2s linear, font-size 0.2s linear;;
+    box-shadow:  0 20px 35px rgba(0,0,0, alpha);
+    z-index: 1;
+}
+
+nav:hover {
+    width: 280px;
+    z-index: 1000;
+}
+nav:hover .nav_item {
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+nav img {
+    position: relative;
+    max-width: 30px;
+    height: auto;
+    margin-left: 10px;
+    margin-top: 35px;
+}
+
+nav img:is([alt="FH Münster"]) {
+    max-width: 50px;
+    height: auto;
+    margin-left: 0px;
+}
+
+nav .nav_item {
+    position: relative;
+    top: -7px;
+    right: -20px;
+    white-space: nowrap;
+    font-size: 0;
+    transition: font-size 0.3s ease;
+}
+
+nav .nav_item:hover {
+    text-decoration: underline;
+}
+
+form div Label{
+    grid-area: label;
+    color:black;
+    background-color: #cdd9ff;
+    border-right: solid 1px darkgray;
+    height: 5em;
+
+}
+body h1{
+    color: #302121;
+    font-size: 35px;
+}
+body h2{
+    color: #302121;
+    font-size: 15px;
+}
+
+form div input:focus {
+    color: #ffffff;
+    background-color: #747785;
+}
+
+form div textarea:focus{
+    color: #ffffff;
+    background-color: #747785;
+}
+
+input[type="submit"] {
+
+    background-color: #82d882;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0c0606;
+}
+
+input[type="submit"]:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
+table{
+    border: 2px solid black;
+    border-collapse: separate;
+    position: relative;
+    margin-top:25px ;
+    background: #cdd9ff;
+}
+
+table th, td{
+    border: 2px solid black;
+    font-size: 17px;
+}
+
+table caption{
+    font-size: 17px;
+    color: #2b6161;
+}
+
+
+

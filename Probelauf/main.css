@@ -1,0 +1,118 @@
+/* navbar */
+
+header, footer{
+    background-color: purple;
+    color: pink;
+    text-decoration: none;
+}
+
+header a, footer a{
+    color: pink;
+    text-decoration: none;
+}
+
+nav ul li{
+    display:inline-block;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 2px;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    word-spacing: 2px;
+    width: 100vw;
+}
+
+nav li {
+    float: left;
+    width: calc(100%);
+    display: inline;
+    word-spacing: 2px;
+}
+
+nav {
+    height: 75px;
+    line-height: 50px;
+}
+
+.akzenteins h1 {
+    color: lightblue;
+}
+
+.akzentzwei h1 {
+    color: darkblue;
+}
+
+form {
+    border: 1px solid black;
+    width: 90%;
+    background-color: whitesmoke;
+    padding: 0 1em;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form label {
+    margin-top: 10px; /* Fügt etwas Abstand zu den Labels hinzu */
+}
+
+form input {
+    margin-top: 0px;
+    margin-bottom: 10px; /* Abstand unter den Inputs */
+    width: 200px;
+}
+
+form button {
+    width: 100px;
+}
+
+form select {
+    width: 200px;
+}
+
+table {
+    margin-top: 50px;
+    color: #333;
+    background: white;
+    border: 1px solid grey;
+    font-size: 12pt;
+    border-collapse: collapse;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 30px;
+}
+
+.infobereich li {
+    margin-bottom: 10px;
+}
+
+.infobereich img {
+    width: 200px;
+}
+
+form[name="delete"] {
+    border: 0px solid black;
+    width: 90%;
+    background-color: white;
+    padding: 0 1em;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form select {
+    margin-bottom: 20px;
+}

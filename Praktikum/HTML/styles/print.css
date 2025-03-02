@@ -1,0 +1,49 @@
+
+
+@media print {
+
+    nav {
+        visibility: hidden;
+    }
+
+    body{
+        page-break-after: always;
+    }
+/* Gesamte Inhalt des Body*/
+
+    .container {
+        width: 100%;
+        max-width: none;
+        margin: 0;  /*Außenabstand*/
+        padding: 20mm;  /*Innenabstand*/
+        font-size: 12pt;
+        background: #fff;
+        color: #000;
+    }
+
+    header, footer {
+        color: #000;
+        background: #fff;
+        border-bottom: 2px solid #000;
+        border-top: 2px solid #000;
+        padding: 5mm;
+    }
+
+    .info, .signatures {
+        border-top: 1px solid #000;
+    }
+
+    h1, h2 {
+        color: #000;
+    }
+
+    ul {
+        padding-left: 5mm;
+    }
+
+
+    .page-break {
+        page-break-after: always;
+    }
+
+}
