@@ -95,31 +95,64 @@
                 <td>BMI männlich</td>
                 <td>BMI weiblich</td>
             </tr>
-            <tr>
-                <td>Untergewicht</td>
-                <td>Unter 20</td>
-                <td>Unter 19</td>
-            </tr>
-            <tr>
-                <td>Normalgewicht</td>
-                <td>20-25</td>
-                <td>19-24</td>
-            </tr>
-            <tr>
-                <td>Übergewicht</td>
-                <td>26-30</td>
-                <td>25-30</td>
-            </tr>
-            <tr>
-                <td>Adipositas</td>
-                <td>31-40</td>
-                <td>31-40</td>
-            </tr>
-            <tr>
-                <td>starke Adipositas</td>
-                <td>größer 40</td>
-                <td>größer 40</td>
-            </tr>
+            <?php
+            // Initialisierung der Zählvariablen
+            $maleUnderweight = $femaleUnderweight = 0;
+            $maleNormal = $femaleNormal = 0;
+            $maleOverweight = $femaleOverweight = 0;
+            $maleObese = $femaleObese = 0;
+            $maleSeverelyObese = $femaleSeverelyObese = 0;
+
+            if (file_exists($jsonFilePath)) {
+                $jsonData = file_get_contents($jsonFilePath);
+                $user = json_decode($jsonData, true);
+
+                foreach ($user as $entry) {
+                    $bmi = $entry["bmi"];
+                    $geschlecht = $entry["geschlecht"];
+
+                    if ($geschlecht == "Männlich") {
+                        if ($bmi < 20) $maleUnderweight++;
+                        elseif ($bmi >= 20 && $bmi <= 25) $maleNormal++;
+                        elseif ($bmi >= 26 && $bmi <= 30) $maleOverweight++;
+                        elseif ($bmi >= 31 && $bmi <= 40) $maleObese++;
+                        else $maleSeverelyObese++;
+                    } elseif ($geschlecht == "Weiblich") {
+                        if ($bmi < 19) $femaleUnderweight++;
+                        elseif ($bmi >= 19 && $bmi <= 24) $femaleNormal++;
+                        elseif ($bmi >= 25 && $bmi <= 30) $femaleOverweight++;
+                        elseif ($bmi >= 31 && $bmi <= 40) $femaleObese++;
+                        else $femaleSeverelyObese++;
+                    }
+                }
+            }
+
+            echo '<tr>
+                    <td>Untergewicht</td>
+                    <td>Unter 20: ' . $maleUnderweight . '</td>
+                    <td>Unter 19: ' . $femaleUnderweight . '</td>
+                  </tr>';
+            echo '<tr>
+                    <td>Normalgewicht</td>
+                    <td>20-25: ' . $maleNormal . '</td>
+                    <td>19-24: ' . $femaleNormal . '</td>
+                  </tr>';
+            echo '<tr>
+                    <td>Übergewicht</td>
+                    <td>26-30: ' . $maleOverweight . '</td>
+                    <td>25-30: ' . $femaleOverweight . '</td>
+                  </tr>';
+            echo '<tr>
+                    <td>Adipositas</td>
+                    <td>31-40: ' . $maleObese . '</td>
+                    <td>31-40: ' . $femaleObese . '</td>
+                  </tr>';
+            echo '<tr>
+                    <td>starke Adipositas</td>
+                    <td>größer 40: ' . $maleSeverelyObese . '</td>
+                    <td>größer 40: ' . $femaleSeverelyObese . '</td>
+                  </tr>';
+            ?>
         </table>
         </div>
         
