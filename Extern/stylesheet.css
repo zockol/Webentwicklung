@@ -1,0 +1,42 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:'titel'
+                        'navi'
+                        'main'
+                        'footer'; 
+    min-height: 100vh;
+}
+
+header{
+    text-align: center;
+    background-color: #2E3532;
+    color: #7E9181;
+    grid-area: titel;
+    text-align: center;
+    position: sticky;  /* Make the header sticky */
+    z-index: 10; /* Ensure it stays above other content */
+    padding: 20px;
+}
+
+nav{
+    background-color: #C7CEDB;
+    color: #0A0F0D;
+    grid-area: navi;
+}
+
+main{
+    grid-area: main;
+    padding: 20px;
+}
+
+footer{
+    grid-area: footer;
+    text-align: center;
+    background-color: #2E3532;
+    color: #7E9181;
+    position: sticky; /* This could also be fixed or just styled normally */
+    padding: 30px 30px;
+    margin-top: auto;
+}
